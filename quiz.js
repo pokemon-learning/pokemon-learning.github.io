@@ -83,9 +83,9 @@ function submitAnswer() {
       quizAnswerInput.value = "";
       feedbackEl.textContent = "";
       showNextQuestion();
-    }, 1000);
+    }, 3000);
   } else {
-    setTimeout(showResult, 1000);
+    setTimeout(showResult, 3000);
   }
 }
 
