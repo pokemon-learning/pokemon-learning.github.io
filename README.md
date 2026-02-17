@@ -1,6 +1,11 @@
 ## Hi there 👋
 
+Welcome to the repository for **Pokemon Learning**:  
 https://pokemon-learning.github.io
+
+Pokemon Learning is a simple web app designed to help you learn Pokémon names
+and test your knowledge through interactive quizzes.
+
 <!--
 **pokemon-learning/pokemon-learning** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
