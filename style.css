@@ -214,3 +214,28 @@ body {
   color: white;
   border-color: #4CAF50;
 }
+
+
+#timer {
+  font-size: 24px;
+  margin: 20px;
+}
+
+#leaderboard {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+#answers button {
+  background-color: #f0f0f0; /* Default color */
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 5px;
+  transition: all 0.2s; /* Makes the color change smooth */
+}
+#answers button.selected {
+  background-color: #4CAF50; /* Green background when selected */
+  color: white;
+  border-color: #2e7d32;
+  transform: scale(1.05); /* Slightly bigger to show it's active */
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pokémon Tournament</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/peerjs@1.5.2/dist/peerjs.min.js"></script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GSV1LHYKRT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-GSV1LHYKRT');
+  </script>
+</head>
+<body>
+    <div id="sidebar">
+        <a href="index.html">Home</a>
+        <a href="learning.html">Learning</a>
+        <a href="quiz.html">Quiz</a>
+        <a href="tournament.html">Tournament</a>
+        <!-- <a href="about.html">About</a> -->
+    </div>
+    <div id="main"> 
+        <h1>⚡ Pokémon Tournament ⚡</h1>
+
+        <div id="menu">
+            <select id="gen-select">
+                <option value="All">All Generations</option>
+                <option value="Gen 1">Gen 1</option>
+                <option value="Gen 2">Gen 2</option>
+                <option value="Gen 3">Gen 3</option>
+                <option value="Gen 4">Gen 4</option>
+                <option value="Gen 5">Gen 5</option>
+                <option value="Gen 6">Gen 6</option>
+                <option value="Gen 7">Gen 7</option>
+                <option value="Gen 8">Gen 8</option>
+                <option value="Gen 9">Gen 9</option>
+            </select>
+
+            <select id="difficulty-select">
+                <option value="easy">Easy</option>
+                <option value="medium" selected>Medium</option>
+                <option value="hard">Hard</option>
+            </select>
+            <button onclick="createGame()">Create Game (Host)</button>
+            <input id="join-code" placeholder="Enter Join Code">
+            <button onclick="joinGame()">Join Game</button>
+        </div>
+
+        <div id="game" style="display:none;">
+        <h2 id="question"></h2>
+        <div id="answers"></div>
+        <style>
+        #answers button {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            font-size: 18px;
+            cursor: pointer;
+            background-color: #f8f9fa;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+        }
+
+        /* This is the magic part you were missing! */
+        #answers button.selected {
+            background-color: #4CAF50; /* Green */
+            color: white;
+            border-color: #2E7D32;
+            transform: scale(1.02);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        #timer {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 20px;
+        }
+        </style>
+        <div id="timer"></div>
+        <div id="leaderboard"></div>
+        </div>
+
+
+        <button id="start-btn" onclick="startTournament()" style="display:none;">
+        🚀 Start Tournament
+        </button>
+            <footer>
+  <p>All Pokémon images and content are © Nintendo, Game Freak, and The Pokémon Company. This site is unofficial and for educational purposes only.</p>
+</footer>
+    </div>
+<!-- <script src="questions.js"></script> -->
+<script src="host.js"></script>
+<script src="client.js"></script>
+</body>
+</html>
