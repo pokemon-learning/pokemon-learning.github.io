@@ -6,6 +6,7 @@ let timer;
 let QUESTIONS = [];
 let POKEMON_DATA = []; // This will hold our fetched Pokémon data
 let gameSettings = { gen: "All", difficulty: "medium" };
+let correctAnswer;
 // A master list of all possible Pokémon types for distractors
 const ALL_TYPES = ["Acier", "Dragon", "Eau", "Électrik", "Feu", "Fée", "Glace", "Insecte", "Normal", "Plante", "Poison", "Psy", "Sol", "Spectre", "Ténèbres"];
 
@@ -244,12 +245,12 @@ function showQuestion() {
 function handleEndOfRound(currentQuestion) {
   // 1. Show the correct answer on the host screen
   if (currentQuestion.type === "choice") {
-    const correctAnswer = currentQuestion.a[currentQuestion.correct];
+    correctAnswer = currentQuestion.a[currentQuestion.correct];
     document.getElementById("question").innerHTML = `
       <span style="color: green;">Réponse correcte: ${correctAnswer}</span>
     `;
   } else if (currentQuestion.type === "text") {
-    const correctAnswer = currentQuestion.correct;
+    correctAnswer = currentQuestion.correct;
     document.getElementById("question").innerHTML = `
       <span style="color: green;">Réponse correcte: ${correctAnswer}</span>
     `;
@@ -258,7 +259,7 @@ function handleEndOfRound(currentQuestion) {
   // 2. Tell the clients the round is over (optional: send them the correct index)
   connections.forEach(c => c.send({ 
     type: "reveal", 
-    correct: currentQuestion.correct 
+    correct: correctAnswer
   }));
 
   // 3. The "Breather" delay (3 seconds) before the next question

@@ -19,6 +19,7 @@ function joinGame() {
     conn.on("data", data => {
       if (data.type === "question") renderQuestion(data.q);
       if (data.type === "leaderboard") renderLeaderboard(data.scores);
+      if (data.type === "reveal") renderAnswerReveal(data.correct);
     });
   });
 }
@@ -93,6 +94,10 @@ function renderQuestion(q) {
       console.log("Time up! Answer sent.");
     }
   }, 1000);
+}
+
+function renderAnswerReveal(correct) {
+  document.getElementById("question").innerHTML += `<br><span style="color: green;">Réponse correcte: ${correct}</span>`;
 }
 
 function renderLeaderboard(scores) {
