@@ -17,21 +17,21 @@
 <body>
 
   <div id="sidebar">
-    <a href="index.html">Home</a>
-    <a href="learning.html">Learning</a>
+    <a href="index.html">Accueil</a>
+    <a href="learning.html">Apprentissage</a>
     <a href="quiz.html">Quiz</a>
-    <a href="tournament.html">Tournament</a>
-    <!-- <a href="about.html">About</a> -->
+    <a href="tournament.html">Tournoi</a>
+    <!-- <a href="about.html">À propos</a> -->
   </div>
 
   <div id="main">
-    <h1>Pokémon Quiz</h1>
+    <h1>Quiz Pokémon</h1>
 
     <!-- Quiz Settings -->
     <div id="quiz-settings">
-      <label for="quiz-gen-select">Select Generation:</label>
+      <label for="quiz-gen-select">Sélectionner la génération :</label>
       <select id="quiz-gen-select">
-        <option value="all">All Generations</option>
+        <option value="all">Toutes les générations</option>
         <option value="Gen 1">Gen 1</option>
         <option value="Gen 2">Gen 2</option>
         <option value="Gen 3">Gen 3</option>
@@ -43,19 +43,20 @@
         <option value="Gen 9">Gen 9</option>
       </select>
 
-      <label for="num-questions">Number of Questions:</label>
+      <label for="num-questions">Nombre de questions :</label>
       <input type="number" id="num-questions" value="10" min="1" max="100">
 
-      <button id="start-quiz">Start Quiz</button>
+      <button id="start-quiz">Commencer le Quiz</button>
     </div>
 
     <!-- Quiz Card -->
     <div id="quiz-card" style="display:none;">
-      <h2 id="quiz-pokemon-name"></h2>
-      <img id="quiz-pokemon-image" src="" alt="">
-      
-      <input type="text" id="quiz-answer" placeholder="Type the Pokémon name">
-      <button id="submit-answer">Submit</button>
+      <div class="image-container">
+        <h2 id="quiz-pokemon-name"></h2>
+        <img id="quiz-pokemon-image" src="" alt="Pokemon">
+      </div>
+      <input type="text" id="quiz-answer" placeholder="Tapez le nom du Pokémon" style="margin: 20px auto; display: block;">
+      <button id="submit-answer">Soumettre</button>
 
       <p id="quiz-feedback"></p>
       <p id="quiz-progress"></p>
@@ -63,12 +64,12 @@
 
     <!-- Quiz Result -->
     <div id="quiz-result" style="display:none;">
-      <h2>Quiz Complete!</h2>
+      <h2>Quiz Terminé !</h2>
       <p id="quiz-score"></p>
-      <button id="restart-quiz">Restart Quiz</button>
+      <button id="restart-quiz">Recommencer le Quiz</button>
     </div>
     <footer>
-  <p>All Pokémon images and content are © Nintendo, Game Freak, and The Pokémon Company. This site is unofficial and for educational purposes only.</p>
+  <p>Toutes les images et le contenu des Pokémon sont © Nintendo, Game Freak et The Pokémon Company. Ce site est non officiel et à des fins éducatives uniquement.</p>
 </footer>
 
   </div>

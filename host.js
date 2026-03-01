@@ -33,7 +33,7 @@ function createGame() {
     peer = new Peer();
 
     peer.on("open", id => {
-        alert("Share this join code with friends:\n" + id);
+        alert("Partagez ce code de connexion avec vos amis :\n" + id);
 
         document.getElementById("menu").style.display = "none";
         document.getElementById("game").style.display = "block";
@@ -263,7 +263,7 @@ function handleEndOfRound(currentQuestion) {
   }));
 
   // 3. The "Breather" delay (3 seconds) before the next question
-  document.getElementById("timer").innerText = "Next question in 3...";
+  document.getElementById("timer").innerText = "Prochaine question dans 3...";
   
   setTimeout(() => {
     nextQuestion(); // This now happens after a 3-second pause

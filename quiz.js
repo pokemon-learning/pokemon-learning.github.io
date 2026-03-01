@@ -42,7 +42,7 @@ startBtn.addEventListener("click", () => {
     : allPokemon.filter(p => p.generation === selectedGen);
 
   if (quizPool.length === 0) {
-    alert("No Pokémon found in this generation!");
+    alert("Aucun Pokémon trouvé dans cette génération !");
     return;
   }
 
@@ -82,7 +82,7 @@ function submitAnswer() {
     feedbackEl.textContent = "Correct! ✅";
     score++;
   } else {
-    feedbackEl.textContent = `Incorrect! ❌ The correct answer is ${quizQuestions[currentIndex].name}`;
+    feedbackEl.textContent = `Incorrect! ❌ La bonne réponse est ${quizQuestions[currentIndex].name}`;
   }
   updateScore(); // live score update
 
@@ -101,18 +101,18 @@ function submitAnswer() {
 // Show next question
 function showNextQuestion() {
   const pokemon = quizQuestions[currentIndex];
-  quizNameEl.textContent = "???";
+  quizNameEl.textContent = "Quel est ce Pokémon ?";
   quizImageEl.src = pokemon.image;
   quizImageEl.style.visibility = "visible";
   quizAnswerInput.value = "";
-  progressEl.textContent = `Question ${currentIndex + 1} of ${quizQuestions.length}`;
+  progressEl.textContent = `Question ${currentIndex + 1} sur ${quizQuestions.length}`;
 }
 
 // Show result
 function showResult() {
   quizCard.style.display = "none";
   quizResult.style.display = "block";
-  scoreEl.textContent = `You scored ${score} out of ${quizQuestions.length}!`;
+  scoreEl.textContent = `Vous avez obtenu ${score} sur ${quizQuestions.length} !`;
 }
 
 // Restart Quiz

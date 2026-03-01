@@ -12,7 +12,7 @@ function joinGame() {
     conn.on("open", () => {
       document.getElementById("menu").style.display = "none";
       document.getElementById("game").style.display = "block";
-      playerName = prompt("Enter your name:");
+      playerName = prompt("Entrez votre nom :");
       conn.send({ type: "join", name: playerName });
     });
 

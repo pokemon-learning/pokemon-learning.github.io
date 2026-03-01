@@ -17,18 +17,18 @@
 </head>
 <body>
     <div id="sidebar">
-        <a href="index.html">Home</a>
-        <a href="learning.html">Learning</a>
+        <a href="index.html">Accueil</a>
+        <a href="learning.html">Apprentissage</a>
         <a href="quiz.html">Quiz</a>
-        <a href="tournament.html">Tournament</a>
-        <!-- <a href="about.html">About</a> -->
+        <a href="tournament.html">Tournoi</a>
+        <!-- <a href="about.html">À propos</a> -->
     </div>
     <div id="main"> 
-        <h1>⚡ Pokémon Tournament ⚡</h1>
+        <h1>⚡ Tournoi Pokémon ⚡</h1>
 
         <div id="menu">
             <select id="gen-select">
-                <option value="All">All Generations</option>
+                <option value="All">Toutes les générations</option>
                 <option value="Gen 1">Gen 1</option>
                 <option value="Gen 2">Gen 2</option>
                 <option value="Gen 3">Gen 3</option>
@@ -41,13 +41,13 @@
             </select>
 
             <select id="difficulty-select">
-                <option value="easy">Easy</option>
-                <option value="medium" selected>Medium</option>
-                <option value="hard">Hard</option>
+                <option value="easy">Facile</option>
+                <option value="medium" selected>Moyen</option>
+                <option value="hard">Difficile</option>
             </select>
-            <button onclick="createGame()">Create Game (Host)</button>
-            <input id="join-code" placeholder="Enter Join Code">
-            <button onclick="joinGame()">Join Game</button>
+            <button onclick="createGame()">Créer une partie (Hôte)</button>
+            <input id="join-code" placeholder="Entrer le code de participation">
+            <button onclick="joinGame()">Rejoindre une partie</button>
         </div>
 
         <div id="game" style="display:none;">
@@ -92,7 +92,7 @@
         🚀 Start Tournament
         </button>
             <footer>
-  <p>All Pokémon images and content are © Nintendo, Game Freak, and The Pokémon Company. This site is unofficial and for educational purposes only.</p>
+  <p>Toutes les images et le contenu des Pokémon sont © Nintendo, Game Freak et The Pokémon Company. Ce site est non officiel et à des fins éducatives uniquement.</p>
 </footer>
     </div>
 <!-- <script src="questions.js"></script> -->

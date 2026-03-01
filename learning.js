@@ -58,7 +58,7 @@ function resetLearningPool() {
 // Pick the next Pokémon
 function nextPokemon() {
   if (learningPool.length === 0) {
-    alert("You have learned all Pokémon in this selection!");
+    alert("Vous avez appris tous les Pokémon de cette sélection !");
     currentPokemon = null;
     showCurrentPokemon();
     return;
@@ -209,7 +209,7 @@ function saveProgress() {
 }
 // Reset all progress button
 document.getElementById("reset-progress").addEventListener("click", () => {
-  if (!confirm("Are you sure you want to reset all progress? This cannot be undone.")) return;
+  if (!confirm("Êtes-vous sûr de vouloir réinitialiser tous les progrès ? Cette action est irréversible.")) return;
 
   // Clear in-memory progress
   progress = {};
